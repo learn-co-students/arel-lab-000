@@ -6,7 +6,7 @@ describe Boat do
       boats = ["H 28", "Nacra 17", "Regulator 34SS", "Zodiac CZ7", "Boston Whaler"]
       expect(Boat.first_five.pluck(:name)).to eq(boats)
     end
-  end
+  end 
 
   describe "::dinghy" do
     it "returns boats shorter than 20 feet" do
@@ -45,7 +45,7 @@ describe Boat do
 
   describe "::with_three_classifications" do
     it "returns boats with three classifications" do
-      boats = ["Nacra 17", "Zodiac CZ7", "Sun Tracker Regency 254 XP3"]
+      boats = ["Nacra 17", "Sun Tracker Regency 254 XP3", "Zodiac CZ7"]
       expect(Boat.with_three_classifications.pluck(:name)).to eq(boats)
     end
   end
